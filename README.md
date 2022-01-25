@@ -1,2 +1,2 @@
 # Aricalot
-Excercise
+git push pull
