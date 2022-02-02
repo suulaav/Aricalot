@@ -11,14 +11,16 @@ class Student{
     private String DOB;
     private String Age;
     private String Class;
+    private String Roll;
 
 
-    Student(String Names, String School, String DOB, String Age, String Class){
+    Student(String Names, String School, String DOB, String Age, String Class, String Roll){
        this.Names=Names;
         this.School = School;
         this.DOB = DOB;
         this.Class = Class;
         this.Age = Age;
+        this.Roll = Roll;
     }
 
 
@@ -37,12 +39,21 @@ class Student{
     public void setAge(String Age){
         this.Age = Age;
     }
+    public void setRoll(String Roll){
+        this.Roll = Roll;
+    }
+
+    public String getRoll(){
+       return this.Roll;
+    }
+
     public void DisplayDetails(){
         System.out.println("Name: "+Names+"\n"+
                            "School: "+School+"\n"+
                            "DOB: "+DOB+"\n"+
                            "Age: "+Age+"\n"+
-                           "Class: "+Class+"\n");
+                           "Class: "+Class+"\n"+
+                            "Roll: "+Roll+"\n");
     }
 
 }
@@ -67,15 +78,15 @@ public class Main {
                    System.out.println("How Many Students You Want to Add");
                    int count = input.nextInt();
                    while (i <= count) {
-                       System.out.println("Input Name , School , DOB , Age , Class respectively");
+                       System.out.println("Input Name , School , DOB , Age ,Class,Roll respectively");
 
                        String Name = input.next();
                        String School = input.next();
                        String DOB = input.next();
                        String Age = input.next();
                        String Class = input.next();
-
-                       Students.add(new Student(Name, School, DOB, Age, Class));
+                       String Roll = input.next();
+                       Students.add(new Student(Name, School, DOB, Age, Class,Roll));
                        i = i + 1;
                    }
                }
@@ -90,19 +101,35 @@ public class Main {
                        Students.get(i).DisplayDetails();
                        System.out.println("\n");
                    }
-                   System.out.println("Which record do you want to edit ?");
-                   int EditUserInput = input.nextInt();
-                   System.out.println("Input Name , School , DOB , Age , Class respectively");
+                   System.out.println("Which record do you want to edit enter roll number if you don't want to change value enter default");
+                   String EditUserInput = input.next();
+                   System.out.println("Input Name , School , DOB , Age ,Roll, Class respectively");
                    String Name = input.next();
                    String School = input.next();
                    String DOB = input.next();
                    String Age = input.next();
+                   String Roll = input.next();
                    String Class = input.next();
-                   Students.get(EditUserInput-1).setAge(Age);
-                   Students.get(EditUserInput-1).setClass(Class);
-                   Students.get(EditUserInput-1).setDOB(DOB);
-                   Students.get(EditUserInput-1).setSchool(School);
-                   Students.get(EditUserInput-1).setName(Name);
+                   for(int i=0;i<Students.size();i++){
+                       String roll = Students.get(i).getRoll();
+                       if (roll.equals(EditUserInput)){
+                           if (!Age.equals("default")){
+                           Students.get(i).setAge(Age);}
+
+                           if (!Class.equals("default")){
+                           Students.get(i).setClass(Class);}
+
+                           if (!DOB.equals("default")){
+                           Students.get(i).setDOB(DOB);}
+                           if (!School.equals("default")){
+                           Students.get(i).setSchool(School);}
+                           if (!Name.equals("default")){
+                           Students.get(i).setName(Name);}
+                           if (!Roll.equals("default")){
+                           Students.get(i).setRoll(Roll);}
+                       }
+                   }
+
 
                    for(int i=0;i<Students.size();i++){
                        Students.get(i).DisplayDetails();

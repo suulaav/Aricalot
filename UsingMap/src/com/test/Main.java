@@ -15,7 +15,38 @@ public class Main {
         Names.put(2,"dsa");
         Names.put(3,"qwe");
         Names.put(4,"ewq");
-        while(true){
+//        int a = 1;
+//        do{
+//           ++a;
+//            System.out.println(a);
+//        }while (a<2);
+//        while (a<2){
+//            System.out.println(a);
+//        }
+//        for(int i=0;i<1;i++){
+//            System.out.println(i);
+//        }
+//        for(int i=0;i<=1;i++){
+//            System.out.println(i);
+//        }
+//        for(;;){
+//
+//        }
+//        int i=0;
+//        for(;i<1;){
+//            System.out.println("here");
+//            i++;
+//        }
+//        i=0;
+//        for(;;i++){
+//            System.out.println("here");
+//            if(i<1){
+//
+//                break;
+//            }
+//        }
+
+  while(true){
             System.out.println("\n");
             System.out.println("Press given numbers to peform taske :" +"\n"+
                     "1. ADD "+"\n"+
