@@ -1,11 +1,14 @@
-package internal.aricalot.learning;
+package internal.aricalot.learning.FirstQuestion;
+
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Question1 {
-    static void num1(){
+public class Main {
+
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         List<Integer> numbers = new ArrayList<>();
         System.out.println("input 20 numbers");
@@ -66,5 +69,4 @@ public class Question1 {
             }
         }
         System.out.print("number of zero numbers are :"+ zero+"\n");
-    }
-}
+}}

@@ -1,5 +1,5 @@
-package internal.aricalot.learning;
-class Employee{
+package internal.aricalot.learning.FourthQuestion;
+class Employee {
     private String id;
     private float salary;
     private int numberOfHoursWorked;
@@ -45,16 +45,3 @@ class Employee{
 
 }
 
-public class Qustion4 {
-    static void num4(){
-
-    Employee newEmployee = new Employee();
-    newEmployee.setId("13006");
-        newEmployee.setSalary(12);
-        newEmployee.setNumberOfHoursWorked(9);
-    System.out.println(newEmployee.getInfo());
-
-
-
-    }
-}
