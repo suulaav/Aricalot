@@ -1,11 +1,13 @@
-package internal.aricalot.learning;
+package internal.aricalot.learning.ThirdQuestion;
+
 
 import java.util.Scanner;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-public class Question3 {
-    static void num3() {
+public class Main {
+
+    public static void main(String[] args) {
         int numOfInput = 5;
         Scanner input = new Scanner(System.in);
         SortedSet<Integer> numbers = new TreeSet<>();
@@ -17,5 +19,6 @@ public class Question3 {
         }
         System.out.println("largest number is :" + numbers.last());
         System.out.println("smallest number is :" + numbers.first());
+
     }
 }
